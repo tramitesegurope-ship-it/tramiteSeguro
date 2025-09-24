@@ -1,45 +1,157 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TrámiteSeguro</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TrámiteSeguro - Documentos legales con IA</title>
 
-        <meta name="description" content="Aquí encontraras documentos automatizados con IA, listos para imprimir">
-        <meta name="author" content="Jano Leon Machuca">
-        <meta name="robots" content="index, follow">
+        <meta name="description" content="Plataforma para automatizar documentos legales con IA. Crea contratos, poderes y trámites listos para imprimir en segundos." />
+        <meta name="author" content="Jano Leon Machuca" />
+        <meta name="robots" content="index, follow" />
 
-        <link rel="stylesheet" href="/tsCss/styles.css">
-        <link rel="icon" href="/img/logoIcon.png">
-        <script src="script.js" defer></script>
-    </head>
+        <link rel="stylesheet" href="/tsCss/styles.css" />
+        <link rel="icon" href="/img/logoIcon.png" />
+        <script src="/tsJs/script.js" defer></script>
+  </head>
 
-    <body>
-        <header>
-            <h1>TrámiteSeguro - documentos legales automatizados con IA</h1>
-            <link rel="logo" href="/img/logoIcon.png">
-            
-            <nav>Quines sonmos</nav>
-            <nav>servicios</nav>
-            <nav>Iniciar tramite</nav>
+  <body>
 
-        </header>
-        <main>
-            <section>
-                 <h2>Documentos legales automatizados en segundos</h2>
-                <p>somos una empresa dedicada a la automatización de documentos legales listos para imprimir</p>
-                <button type="button">comenzar</button>
-            </section>
-            <h1>Trámite Seguro</h1>
-            <p>Automatización de documentos legales con IA.</p>
+    <header>
+        <h1>TrámiteSeguro - documentos legales automatizados con IA</h1>
+        <img class="logo" src="/img/logoIcon.png" alt="Logo Trámite Seguro" width="50" height="50" />
 
-           
+        <nav aria-label="Navegación principal">
+            <ul>
+            <li><a href="#quienes-somos">Quiénes somos</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#iniciar-tramite">Iniciar trámite</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        </main>
-        <footer>
-            <p>© 2025 TrámiteSeguro.</p>
-            no se hace el link de email
+    <main>
 
-        </footer>        
-    </body>
+        <section id="quienes-somos">
+            <h2>Documentos legales automatizados en segundos</h2>
+            <p>Somos una empresa dedicada a la automatización de documentos legales listos para imprimir</p>
+            <button id="btComenzar" type="button">Comenzar</button>
+        </section>
+
+        <section id="servicios">
+            <!-- Próximamente: 3 tarjetas DocYa / TrámitaloYa / PágaloYa -->
+        </section>
+
+        <section id="iniciar-tramite">
+            <form id="ts-form" method="post" action="">
+                <h2>TrámiteSeguro</h2>
+
+                <fieldset>
+                    <legend>¿Qué deseas hacer?</legend>
+                    <input type="radio" name="accion" id="crearDocumentoLegal" value="crear" required />
+                    <label for="crearDocumentoLegal">Crear documento legal</label>
+
+                    <input type="radio" name="accion" id="iniciarTramiteLegal" value="iniciar" />
+                    <label for="iniciarTramiteLegal">Iniciar trámite oficial</label>
+
+                    <input type="radio" name="accion" id="pagarTasaOficial" value="pagar" />
+                    <label for="pagarTasaOficial">Pagar tasa oficial</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Datos generales del solicitante</legend>
+
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" autocomplete="name" required />
+
+                    <label for="dni">DNI</label>
+                    <input type="text" id="dni" name="dni" pattern="^\d{8}$" inputmode="numeric" maxlength="8" required />
+
+                    <label for="telefono">Teléfono (WhatsApp)</label>
+                    <input id="telefono" name="telefono" type="tel" autocomplete="tel" required data-intl-tel />
+                    <input id="telefono_e164" name="telefono_e164" type="hidden" />
+
+                    <label for="email">E-Mail</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required />
+
+                    <label for="domicilio">Domicilio actual</label>
+                    <textarea id="domicilio" name="domicilio" autocomplete="street-address" required></textarea>
+
+                    <label for="lugarNacimiento">Lugar de nacimiento</label>
+                    <input type="text" id="lugarNacimiento" name="lugarNacimiento" autocomplete="address-level2" required />
+
+                    <label for="fechaNacimiento">Fecha de nacimiento</label>
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento" required />
+                </fieldset>
+
+                <fieldset>
+                    <legend>¿Qué documento legal deseas crear?</legend>
+                    <label for="documento" class="sr-only">Selecciona un documento</label>
+                    <select name="documento" id="documento" required>
+                    <option value="" disabled selected>Seleccione...</option>
+                    <option value="divorcio_expres">Divorcio Exprés</option>
+                    <option value="contrato">Contratos</option>
+                    <option value="otro">Otros documentos</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Divorcio exprés.</legend>
+
+                    <fieldset>
+                        <legend>Tipo de municipalidad donde presentarás tu trámite</legend>
+                        <input type="radio" name="tipoMuniTramite" id="tipoMuniTramProv" value="provincial" required />
+                        <label for="tipoMuniTramProv">Provincial</label>
+
+                        <input type="radio" name="tipoMuniTramite" id="tipoMuniTramDist" value="distrital" />
+                        <label for="tipoMuniTramDist">Distrital</label>
+                    </fieldset>
+
+                    <label for="nombreMunicipalidadTramite">Nombre de la municipalidad donde presentarás tu trámite</label>
+                    <input type="text" id="nombreMunicipalidadTramite" name="nombreMunicipalidadTramite" required />
+
+                    <label for="fechaMatCivil">Fecha del matrimonio civil</label>
+                    <input type="date" id="fechaMatCivil" name="fechaMatCivil" required />
+
+                    <fieldset>
+                        <legend>Tipo de municipalidad donde se casaron</legend>
+                        <input type="radio" name="tipoMuniCasaron" id="casaronProv" value="provincial" required />
+                        <label for="casaronProv">Provincial</label>
+
+                        <input type="radio" name="tipoMuniCasaron" id="casaronDist" value="distrital" />
+                        <label for="casaronDist">Distrital</label>
+                    </fieldset>
+
+                    <label for="nombreMunicipalidadCasaron">Nombre de la municipalidad donde se casaron</label>
+                    <input type="text" id="nombreMunicipalidadCasaron" name="nombreMunicipalidadCasaron" required />
+
+                    <label for="direccionDomicilioConyugal">Dirección del último domicilio conyugal</label>
+                    <textarea id="direccionDomicilioConyugal" name="direccionDomicilioConyugal" required></textarea>
+
+                    <label for="nombreConyugeNoSolicitante">Nombre del cónyuge no solicitante</label>
+                    <input type="text" id="nombreConyugeNoSolicitante" name="nombreConyugeNoSolicitante" required />
+
+                    <label for="dniConyugeNoSolicitante">DNI del cónyuge no solicitante</label>
+                    <input
+                    type="text"
+                    id="dniConyugeNoSolicitante"
+                    name="dniConyugeNoSolicitante"
+                    pattern="^\d{8}$"
+                    inputmode="numeric"
+                    maxlength="8"
+                    required
+                    />
+
+                    <label for="domicilioConyugeNoSolicitante">Domicilio actual del cónyuge no solicitante</label>
+                    <textarea id="domicilioConyugeNoSolicitante" name="domicilioConyugeNoSolicitante" required></textarea>
+                </fieldset>
+
+                <button type="submit">Siguiente</button>
+            </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 TrámiteSeguro</p>
+    </footer>
+  </body>
 </html>
