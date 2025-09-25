@@ -17,7 +17,7 @@
     --fs-300:1rem;              /* 16px base */
     --fs-500:1.25rem;           /* 20px subtítulos/cards */
     --fs-700:1.875rem;          /* 30px títulos sección */
-    --fs-900:1.125rem
+    --fs-900:3rem;
 
     /* ESPACIADO (MULTIPLOS DE 4PX) */
     --space-2:0.5rem;           /* 8px  */
@@ -62,7 +62,7 @@ a:hover{text-decoration: underline;}
 
 /* Titulación base (usa tus tokens) */
 h1,h2,h3,h4{ margin: 0 0 var(--space-3); line-height: 1.25; }
-h1{ font-size: calc(var(--fs-700) * 1.3); } /* título principal (pocas veces) */
+h1{ font-size: calc(var(--fs-900) * 1.3); } /* título principal (pocas veces) */
 h2{ font-size: var(--fs-700); }             /* títulos de sección (#beneficios, #servicios, form) */
 h3{ font-size: var(--fs-500); }             /* subtítulos (cards) */
 h4{ font-size: 1.125rem; }                    /* detalles dentro de cards */
@@ -96,3 +96,76 @@ h4{ font-size: 1.125rem; }                    /* detalles dentro de cards */
   box-shadow: var(--shadow-1);
 }
 .cards img[aria-hidden="true"]{ margin-bottom: var(--space-3); }
+
+/* Quita los bullets del contenedor grid de servicios */
+ul.cards{
+  list-style: none;   /* sin viñetas en el contenedor */
+  margin: 0;          /* limpia márgenes por defecto del <ul> */
+  padding: 0;         /* quita sangría izquierda del <ul> */
+}
+ul.cards > li{
+  margin: 0;          /* evita espacios raros entre items */
+  padding: 0;
+}
+
+/* Mantén bullets y numeración DENTRO de cada card */
+.cards article ul{
+  list-style: disc;           /* viñetas normales */
+  padding-left: 1.1rem;       /* sangría cómoda dentro de la card */
+  margin: 0;
+}
+.cards article ol{
+  list-style: decimal;        /* numeración */
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+/* Botón base + variante primaria */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  gap:.5ch;
+  padding:.7rem 1.1rem;
+  border:1px solid transparent;
+  border-radius: var(--radius-md);
+  font-weight:600;
+  text-decoration:none;
+  cursor:pointer;
+  transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+}
+.btn-primario{
+  background: var(--brand-600);
+  color:#fff;
+  box-shadow: var(--shadow-1);
+}
+.btn-primario:hover{ transform: translateY(-1px); box-shadow: 0 4px 10px rgba(0,0,0,.08); }
+.btn-primario:active{ transform: translateY(0); }
+
+/* Aire vertical con tokens */
+#beneficios{ padding: var(--space-12) 0; background: var(--bg-alt); }
+#servicios{  padding: var(--space-12) 0; }
+#iniciar-tramite{ padding: var(--space-12) 0; border-top:1px solid var(--border); }
+
+/* Formularios: base limpia */
+form fieldset{
+  border:1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  background:#fff;
+  margin:0 0 var(--space-6);
+}
+form label{
+  display:block;
+  margin: 0 0 var(--space-2);
+  font-weight:600;
+}
+form input, form select, form textarea{
+  width:100%;
+  padding:.65rem .8rem;
+  border:1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font: inherit;
+  background:#fff;
+}
+form textarea{ min-height: 7rem; resize: vertical; }
+
+
