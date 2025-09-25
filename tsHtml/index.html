@@ -24,272 +24,347 @@
          ========================================================= -->
     <header>
       <h1>TrámiteSeguro - documentos legales automatizados con IA</h1>
-      <!-- Logotipo clicable al Hero (mejora UX/teclado con aria-label) -->
+      <!-- Logotipo clicable al Hero -->
       <a href="#hero" aria-label="Ir al inicio (Hero)">
         <img class="logo" src="/img/logoHorizontal.png" alt="TrámiteSeguro" width="600" height="400">
       </a>
 
-      <!-- Nav principal (3 secciones) -->
+      <!-- Nav principal -->
       <nav aria-label="Navegación principal">
         <ul>
           <li><a href="#hero">Inicio</a></li>
           <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#iniciar-tramite">Iniciar trámite</a></li>
+          <li><a href="#servicios">Iniciar trámite</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
       <!-- =========================================================
-           HERO: Mensaje principal + CTA + imagen de contexto
-           Nota: en T7/T8 se estiliza (tipos, espaciado, botón, etc.)
+           HERO
            ========================================================= -->
       <section id="hero" aria-labelledby="hero-title">
         <h2 id="hero-title">Documentos legales listos en minutos</h2>
         <p>Crea contratos, poderes y trámites con IA: rápido, validado y listo para imprimir.</p>
-        <a href="#iniciar-tramite">Comenzar ahora</a>
+        <a href="#servicios">Comienza ahora</a>
 
         <figure>
-          <!-- TODO perf: se puede servir como WebP/AVIF y usar srcset -->
           <img src="/img/hero-banner.png" alt="Generación de documentos legales en línea" width="1600" height="560">
         </figure>
       </section>
 
-      <!-- =========================================================
-           BENEFICIOS (opcional en tu réplica 1:1 del Framer)
-           Íconos decorativos: alt="" + aria-hidden="true"
-           ========================================================= -->
+      <!-- =========================================
+           BENEFICIOS (+ Ventaja silenciosa)
+           ========================================= -->
       <section id="beneficios" aria-labelledby="beneficios-title">
-        <h2 id="beneficios-title">¿Por qué usar TrámiteSeguro?</h2>
-        <div class="cards">
-          <article>
-            <img src="/img/rapido.png" alt="" aria-hidden="true" width="40" height="40">
-            <h3>Rápido</h3>
-            <p>Tus documentos listos en minutos.</p>
-          </article>
+        <div class="contenedor">
+          <h2 id="beneficios-title">¿Por qué usar TrámiteSeguro?</h2>
+          <p>
+            Ahorras horas y evitas errores. Combinamos IA con revisión humana para
+            redactar y validar tus documentos a la primera, sin colas ni papeleo innecesario.
+          </p>
 
-          <article>
-            <img src="/img/seguridad.png" alt="" aria-hidden="true" width="40" height="40">
-            <h3>Seguro</h3>
-            <p>Protección de datos y encriptación.</p>
-          </article>
+          <div class="cards">
+            <article>
+              <img src="/img/rapido.png" alt="" aria-hidden="true" width="40" height="40" loading="lazy" decoding="async">
+              <h3>Rápido</h3>
+              <ul>
+                <li>Documentos listos en minutos.</li>
+                <li>Redacción con criterios legales claros.</li>
+              </ul>
+            </article>
 
-          <article>
-            <img src="/img/facil.png" alt="" aria-hidden="true" width="40" height="40">
-            <h3>Fácil</h3>
-            <p>Interfaz intuitiva sin complicaciones.</p>
-          </article>
+            <article>
+              <img src="/img/seguridad.png" alt="" aria-hidden="true" width="40" height="40" loading="lazy" decoding="async">
+              <h3>Seguro</h3>
+              <ul>
+                <li>Protección de datos y encriptación.</li>
+                <li>Validación garantizada antes de entregar.</li>
+                <li>Soporte cercano por WhatsApp.</li>
+              </ul>
+            </article>
+
+            <article>
+              <img src="/img/facil.png" alt="" aria-hidden="true" width="40" height="40" loading="lazy" decoding="async">
+              <h3>Fácil</h3>
+              <ul>
+                <li>Interfaz intuitiva, sin curva de aprendizaje.</li>
+                <li>Guía paso a paso durante todo el flujo.</li>
+              </ul>
+            </article>
+          </div>
+
+          <!-- Ventaja silenciosa -->
+          <section id="ventaja-silenciosa" aria-labelledby="ventaja-title" data-block="ventaja-silenciosa">
+            <h3 id="ventaja-title">Tu ventaja silenciosa en el mundo legal y estatal.</h3>
+            <p>
+              Mientras otros pierden tiempo en filas y formularios, tú avanzas con una
+              combinación precisa de IA + revisión humana. Menos fricción, más resultados
+              listos para imprimir y presentar.
+            </p>
+            <p>
+              <a
+                class="btn btn-primario"
+                href="#servicios"
+                aria-label="ir a la sección de servicios"
+                data-track="cta-ventaja"
+                data-doc="ventaja-silenciosa"
+              >Comienza ahora</a>
+            </p>
+          </section>
         </div>
       </section>
 
       <!-- =========================================================
-           SERVICIOS: 3 tarjetas con copy, beneficios, pasos y CTA
-           Semántica: h2 (sección) > h3 (card) > h4 (subbloques)
+           SERVICIOS
            ========================================================= -->
       <section id="servicios" aria-labelledby="servicios-title">
-        <h2 id="servicios-title">Elige lo que necesitas</h2>
-        <p>Nosotros nos encargamos del resto.</p>
+        <div class="contenedor">
+          <h2 id="servicios-title">Elige lo que necesitas</h2>
+          <p>Nosotros nos encargamos del resto.</p>
 
-        <ul>
-          <!-- DocYa -->
-          <li>
-            <article data-doc="docya">
-              <h3>DocYa</h3>
-              <p>Documentos legales al instante.</p>
-              <p>
-                Crea contratos, divorcios exprés, poderes y más, listos para imprimir en minutos.
-                Sin abogados, sin complicaciones, con redacción profesional validada.
-              </p>
+          <ul class="cards">
+            <!-- DocYa -->
+            <li>
+              <article data-doc="docya">
+                <h3>DocYa</h3>
+                <p>Documentos legales al instante.</p>
+                <p>
+                  Crea contratos, divorcios exprés, poderes y más, listos para imprimir en minutos.
+                  Sin abogados, sin complicaciones, con redacción profesional validada.
+                </p>
 
-              <h4>Beneficios principales</h4>
-              <ul>
-                <li>Redacción validada legalmente.</li>
-                <li>Entrega inmediata en formato Doc.</li>
-              </ul>
+                <h4>Beneficios principales</h4>
+                <ul>
+                  <li>Redacción validada legalmente.</li>
+                  <li>Entrega inmediata en formato Doc.</li>
+                </ul>
 
-              <h4>Cómo funciona</h4>
-              <ol>
-                <li>Elige el tipo de documento.</li>
-                <li>Completa tus datos.</li>
-                <li>Descarga y usa tu documento al instante.</li>
-              </ol>
+                <h4>Cómo funciona</h4>
+                <ol>
+                  <li>Elige el tipo de documento.</li>
+                  <li>Completa tus datos.</li>
+                  <li>Descarga y usa tu documento al instante.</li>
+                </ol>
 
-              <a href="#iniciar-tramite">Crear documento</a>
-            </article>
-          </li>
+                <a href="#iniciar-tramite" data-open-flow="crear" aria-label="Ir al formulario (Crear documento)">
+                  Crear documento
+                </a>
+              </article>
+            </li>
 
-          <!-- TrámitaloYa -->
-          <li>
-            <article data-doc="tramitaloya">
-              <h3>TrámitaloYa</h3>
-              <p>Trámites estatales en minutos, sin colas ni papeleos.</p>
-              <p>
-                Gestiona certificados policiales, penales, judiciales, actas y más.
-                Solo completa el formulario, nosotros lo hacemos por ti y lo recibes en tu correo o WhatsApp.
-              </p>
+            <!-- TrámitaloYa -->
+            <li>
+              <article data-doc="tramitaloya">
+                <h3>TrámitaloYa</h3>
+                <p>Trámites estatales en minutos, sin colas ni papeleos.</p>
+                <p>
+                  Gestiona certificados policiales, penales, judiciales, actas y más.
+                  Solo completa el formulario, nosotros lo hacemos por ti y lo recibes en tu correo o WhatsApp.
+                </p>
 
-              <h4>Beneficios principales</h4>
-              <ul>
-                <li>Ahorra tiempo evitando colas.</li>
-                <li>Gestión 100% digital y validada.</li>
-              </ul>
+                <h4>Beneficios principales</h4>
+                <ul>
+                  <li>Ahorra tiempo evitando colas.</li>
+                  <li>Gestión 100% digital y validada.</li>
+                </ul>
 
-              <h4>Cómo funciona</h4>
-              <ol>
-                <li>Selecciona el trámite que necesitas.</li>
-                <li>Completa tus datos básicos.</li>
-                <li>Recibe tu trámite listo para presentar.</li>
-              </ol>
+                <h4>Cómo funciona</h4>
+                <ol>
+                  <li>Selecciona el trámite que necesitas.</li>
+                  <li>Completa tus datos básicos.</li>
+                  <li>Recibe tu trámite listo para presentar.</li>
+                </ol>
 
-              <a href="#iniciar-tramite">Iniciar trámite</a>
-            </article>
-          </li>
+                <a href="#iniciar-tramite" data-open-flow="tramite" aria-label="Ir al formulario (Iniciar trámite)">
+                  Iniciar trámite
+                </a>
+              </article>
+            </li>
 
-          <!-- PágaloYa -->
-          <li>
-            <article data-doc="pagaloya">
-              <h3>PágaloYa</h3>
-              <p>Paga tasas oficiales de forma segura y validada.</p>
-              <p>
-                Paga tasas oficiales del Banco de la Nación, PJ, Sunat, Reniec y más.
-                En minutos, sin filas. Recibe tu comprobante validado directo en tu correo o WhatsApp.
-              </p>
+            <!-- PágaloYa -->
+            <li>
+              <article data-doc="pagaloya">
+                <h3>PágaloYa</h3>
+                <p>Paga tasas oficiales de forma segura y validada.</p>
+                <p>
+                  Paga tasas oficiales del Banco de la Nación, PJ, Sunat, Reniec y más.
+                  En minutos, sin filas. Recibe tu comprobante validado directo en tu correo o WhatsApp.
+                </p>
 
-              <h4>Beneficios principales</h4>
-              <ul>
-                <li>Pagos rápidos con confirmación inmediata.</li>
-                <li>Transacciones seguras y encriptadas.</li>
-              </ul>
+                <h4>Beneficios principales</h4>
+                <ul>
+                  <li>Pagos rápidos con confirmación inmediata.</li>
+                  <li>Transacciones seguras y encriptadas.</li>
+                </ul>
 
-              <h4>Cómo funciona</h4>
-              <ol>
-                <li>Elige la tasa oficial que deseas pagar.</li>
-                <li>Ingresa tus datos y método de pago.</li>
-                <li>Recibe tu comprobante validado al instante.</li>
-              </ol>
+                <h4>Cómo funciona</h4>
+                <ol>
+                  <li>Elige la tasa oficial que deseas pagar.</li>
+                  <li>Ingresa tus datos y método de pago.</li>
+                  <li>Recibe tu comprobante validado al instante.</li>
+                </ol>
 
-              <a href="#iniciar-tramite">Pagar ahora</a>
-            </article>
-          </li>
-        </ul>
+                <a href="#iniciar-tramite" data-open-flow="pagar" aria-label="Ir al formulario (Pagar tasa)">
+                  Pagar ahora
+                </a>
+              </article>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- =========================================================
-           FORMULARIO: versión extendida (luego haremos multipaso T6)
-           Notas:
-           - action="" por ahora (T10: envío/validaciones reales)
-           - Teléfono: ya preparado para intl-tel-input con hidden E.164
+           FORMULARIO (HTML simple con ganchos; JS lo mejora)
            ========================================================= -->
       <section id="iniciar-tramite">
         <form id="ts-form" method="post" action="">
           <h2>TrámiteSeguro</h2>
 
-          <!-- Paso 1: qué hacer -->
-          <fieldset>
-            <legend>¿Qué deseas hacer?</legend>
-            <input type="radio" name="accion" id="crearDocumentoLegal" value="crear" required />
-            <label for="crearDocumentoLegal">Crear documento legal</label>
-
-            <input type="radio" name="accion" id="iniciarTramiteLegal" value="iniciar" />
-            <label for="iniciarTramiteLegal">Iniciar trámite oficial</label>
-
-            <input type="radio" name="accion" id="pagarTasaOficial" value="pagar" />
-            <label for="pagarTasaOficial">Pagar tasa oficial</label>
-          </fieldset>
-
-          <!-- Paso 2: datos solicitante -->
+          <!-- 1) Campos comunes (mínimos) -->
           <fieldset>
             <legend>Datos generales del solicitante</legend>
 
             <label for="nombre">Nombre completo</label>
-            <input type="text" id="nombre" name="nombre" autocomplete="name" required />
+            <input type="text" id="nombre" name="nombre" autocomplete="name" required>
 
             <label for="dni">DNI</label>
-            <input type="text" id="dni" name="dni" pattern="^\d{8}$" inputmode="numeric" maxlength="8" required />
+            <input type="text" id="dni" name="dni" pattern="^\d{8}$" inputmode="numeric" maxlength="8" required>
 
-            <!-- Teléfono: en T10 se inicializa intl-tel-input y se llena telefono_e164 -->
             <label for="telefono">Teléfono (WhatsApp)</label>
-            <input id="telefono" name="telefono" type="tel" autocomplete="tel" required data-intl-tel />
-            <input id="telefono_e164" name="telefono_e164" type="hidden" />
+            <input id="telefono" name="telefono" type="tel" autocomplete="tel" required data-intl-tel>
+            <input id="telefono_e164" name="telefono_e164" type="hidden">
 
             <label for="email">E-Mail</label>
-            <input type="email" id="email" name="email" autocomplete="email" required />
-
-            <label for="domicilio">Domicilio actual</label>
-            <textarea id="domicilio" name="domicilio" autocomplete="street-address" required></textarea>
-
-            <label for="lugarNacimiento">Lugar de nacimiento</label>
-            <input type="text" id="lugarNacimiento" name="lugarNacimiento" autocomplete="address-level2" required />
-
-            <label for="fechaNacimiento">Fecha de nacimiento</label>
-            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required />
+            <input type="email" id="email" name="email" autocomplete="email" required>
           </fieldset>
 
-          <!-- Paso 3: tipo de documento -->
+          <!-- 2) Flow seleccionado por JS (desde data-open-flow en tarjetas) -->
+          <input type="hidden" id="flow" name="flow" value="crear">
+
+          <!-- 3) Contenedores mínimos por flujo -->
+          <section id="flow-crear" data-flow="crear">
+            <fieldset>
+              <legend>¿Qué documento legal deseas crear?</legend>
+              <label for="documento" class="sr-only">Tipo de documento</label>
+              <select id="documento" name="documento">
+                <option value="" selected disabled>Seleccione…</option>
+                <option value="contrato">Contrato</option>
+                <option value="divorcio_expres">Divorcio exprés</option>
+                <option value="carta_poder">Carta poder</option>
+                <option value="solicitud">Solicitud</option>
+                <option value="otros">Otros</option>
+              </select>
+            </fieldset>
+
+            <div id="mount-doc"></div>
+          </section>
+
+          <section id="flow-tramite" data-flow="tramite" hidden>
+            <fieldset>
+              <legend>¿Qué trámite deseas realizar?</legend>
+              <label for="tipo_tramite" class="sr-only">Tipo de trámite</label>
+              <select id="tipo_tramite" name="tipo_tramite">
+                <option value="" selected disabled>Seleccione…</option>
+                <option value="antecedentes_policiales">Certificado de antecedentes policiales</option>
+                <option value="antecedentes_penales">Certificado de antecedentes penales</option>
+                <option value="antecedentes_judiciales">Certificado de antecedentes judiciales</option>
+                <option value="apostilla">Apostilla</option>
+              </select>
+            </fieldset>
+
+            <div id="mount-tramite"></div>
+          </section>
+
+          <section id="flow-pagar" data-flow="pagar" hidden>
+            <fieldset>
+              <legend>¿Qué tasa deseas pagar?</legend>
+              <label for="concepto_pago" class="sr-only">Concepto</label>
+              <select id="concepto_pago" name="concepto_pago">
+                <option value="" selected disabled>Seleccione…</option>
+                <option value="bn_duplicado_dni">BN – Duplicado DNI (S/ xx.xx)</option>
+                <option value="reniec_certificado">RENIEC – Certificado (S/ xx.xx)</option>
+                <option value="pj_copias_certificadas">PJ – Copias certificadas (S/ xx.xx)</option>
+                <option value="otros">Otra tasa…</option>
+              </select>
+            </fieldset>
+
+            <fieldset>
+              <legend>Otra tasa (opcional)</legend>
+              <label for="otra_tasa" class="sr-only">Nombre de la tasa</label>
+              <input type="text" id="otra_tasa" name="otra_tasa" placeholder="Escribe la tasa si no aparece en la lista">
+            </fieldset>
+
+            <div id="mount-pago"></div>
+          </section>
+
+          <!-- 4) CTA general -->
+          <p><button type="submit" class="btn btn-primario">Continuar</button></p>
+        </form>
+
+        <!-- 5) Templates (inyectados por JS según selección) -->
+        <template id="tpl-doc-contrato">
           <fieldset>
-            <legend>¿Qué documento legal deseas crear?</legend>
-            <!-- TODO a11y: .sr-only se definirá en T7 -->
-            <label for="documento" class="sr-only">Selecciona un documento</label>
-            <select name="documento" id="documento" required>
-              <option value="" disabled selected>Seleccione...</option>
-              <option value="divorcio_expres">Divorcio Exprés</option>
-              <option value="contrato">Contratos</option>
-              <option value="otro">Otros documentos</option>
+            <legend>Datos del contratante</legend>
+            <input type="text" name="contratante_nombre" placeholder="Nombre completo" required>
+            <input type="text" name="contratante_id" placeholder="DNI / RUC" required>
+            <input type="text" name="contratante_domicilio" placeholder="Domicilio" required>
+          </fieldset>
+          <fieldset>
+            <legend>Datos del contratado</legend>
+            <input type="text" name="contratado_nombre" placeholder="Nombre completo" required>
+            <input type="text" name="contratado_id" placeholder="DNI / RUC" required>
+            <input type="text" name="contratado_domicilio" placeholder="Domicilio" required>
+          </fieldset>
+          <fieldset>
+            <legend>Tipo de contrato</legend>
+            <select name="tipo_contrato" required>
+              <option value="" selected disabled>Seleccione…</option>
+              <option value="alquiler_vivienda">Alquiler de vivienda</option>
+              <option value="alquiler_vehiculo">Alquiler de vehículo</option>
+              <option value="servicios">Prestación de servicios</option>
+              <option value="compraventa">Compraventa</option>
+              <option value="otros">Otros</option>
             </select>
           </fieldset>
+        </template>
 
-          <!-- Paso 4: detalles (ejemplo: Divorcio exprés) -->
+        <template id="tpl-doc-divorcio">
           <fieldset>
             <legend>Divorcio exprés</legend>
 
             <fieldset>
               <legend>Tipo de municipalidad donde presentarás tu trámite</legend>
-              <input type="radio" name="tipoMuniTramite" id="tipoMuniTramProv" value="provincial" required />
-              <label for="tipoMuniTramProv">Provincial</label>
-
-              <input type="radio" name="tipoMuniTramite" id="tipoMuniTramDist" value="distrital" />
-              <label for="tipoMuniTramDist">Distrital</label>
+              <label><input type="radio" name="tipoMuniTramite" value="provincial" required> Provincial</label>
+              <label><input type="radio" name="tipoMuniTramite" value="distrital"> Distrital</label>
             </fieldset>
 
-            <label for="nombreMunicipalidadTramite">Nombre de la municipalidad donde presentarás tu trámite</label>
-            <input type="text" id="nombreMunicipalidadTramite" name="nombreMunicipalidadTramite" required />
-
-            <label for="fechaMatCivil">Fecha del matrimonio civil</label>
-            <input type="date" id="fechaMatCivil" name="fechaMatCivil" required />
+            <input type="text" name="nombreMunicipalidadTramite" placeholder="Municipalidad donde presentarás" required>
+            <input type="date" name="fechaMatCivil" required>
 
             <fieldset>
               <legend>Tipo de municipalidad donde se casaron</legend>
-              <input type="radio" name="tipoMuniCasaron" id="casaronProv" value="provincial" required />
-              <label for="casaronProv">Provincial</label>
-
-              <input type="radio" name="tipoMuniCasaron" id="casaronDist" value="distrital" />
-              <label for="casaronDist">Distrital</label>
+              <label><input type="radio" name="tipoMuniCasaron" value="provincial" required> Provincial</label>
+              <label><input type="radio" name="tipoMuniCasaron" value="distrital"> Distrital</label>
             </fieldset>
 
-            <label for="nombreMunicipalidadCasaron">Nombre de la municipalidad donde se casaron</label>
-            <input type="text" id="nombreMunicipalidadCasaron" name="nombreMunicipalidadCasaron" required />
+            <input type="text" name="nombreMunicipalidadCasaron" placeholder="Municipalidad donde se casaron" required>
+            <textarea name="direccionDomicilioConyugal" placeholder="Último domicilio conyugal" required></textarea>
 
-            <label for="direccionDomicilioConyugal">Dirección del último domicilio conyugal</label>
-            <textarea id="direccionDomicilioConyugal" name="direccionDomicilioConyugal" required></textarea>
-
-            <label for="nombreConyugeNoSolicitante">Nombre del cónyuge no solicitante</label>
-            <input type="text" id="nombreConyugeNoSolicitante" name="nombreConyugeNoSolicitante" required />
-
-            <label for="dniConyugeNoSolicitante">DNI del cónyuge no solicitante</label>
-            <input type="text" id="dniConyugeNoSolicitante" name="dniConyugeNoSolicitante" pattern="^\d{8}$" inputmode="numeric" maxlength="8" required />
-
-            <label for="domicilioConyugeNoSolicitante">Domicilio actual del cónyuge no solicitante</label>
-            <textarea id="domicilioConyugeNoSolicitante" name="domicilioConyugeNoSolicitante" required></textarea>
+            <input type="text" name="nombreConyugeNoSolicitante" placeholder="Nombre del cónyuge no solicitante" required>
+            <input type="text" name="dniConyugeNoSolicitante" pattern="^\d{8}$" inputmode="numeric" maxlength="8" placeholder="DNI del cónyuge" required>
+            <textarea name="domicilioConyugeNoSolicitante" placeholder="Domicilio del cónyuge" required></textarea>
           </fieldset>
+        </template>
 
-          <!-- CTA del formulario (en T6 será multipaso con navegación) -->
-          <button type="submit">Siguiente</button>
-        </form>
+        <template id="tpl-doc-poder"><p class="muted">Campos de Carta poder…</p></template>
+        <template id="tpl-doc-solicitud"><p class="muted">Campos de Solicitud…</p></template>
+        <template id="tpl-doc-otros"><p class="muted">Describe el documento que necesitas…</p></template>
       </section>
     </main>
 
     <!-- =========================================================
-         FOOTER: legal/© (en T8 se estiliza y se añaden links)
+         FOOTER
          ========================================================= -->
     <footer>
       <p>© 2025 TrámiteSeguro</p>
