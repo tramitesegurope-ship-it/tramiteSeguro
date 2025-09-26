@@ -254,8 +254,8 @@ input[type="radio"]+label, input[type="checkbox"]+label{
 
 /* Separación clara del bloque “Ventaja silenciosa” */
 #ventaja-silenciosa{
-  margin-top: var(--space-12);        
-  padding-top: var(--space-12);
+  margin-top: var(--space-8);        
+  padding-top: var(--space-6);
   border-top: 1px solid var(--border);
 }
 
@@ -274,6 +274,18 @@ input[type="radio"]+label, input[type="checkbox"]+label{
   margin: 0 0 var(--space-3);
   text-align: center;
 }
+
+#beneficios .cards article h3{
+  font-size: clamp(1.5rem, 1rem + 1.2vw, 2rem);  /* más proporcionado al ícono (60px) */
+}
+
+
+@media (max-width: 640px){
+  p{ font-size: 1rem; }                 /* mejor lectura en móvil */
+  #hero .contenedor{ gap: var(--space-6); }
+  #beneficios, #servicios{ padding: var(--space-8) 0; }
+}
+
 
 
 
